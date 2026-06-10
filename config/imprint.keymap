@@ -19,7 +19,7 @@
 &kp TAB    &kp Q   &kp W     &kp E     &kp R      &kp T             &kp Y   &kp U            &kp I      &kp O     &kp P     &kp BSLH
 &mo 2      &kp A   &kp S     &kp D     &kp F      &kp G             &kp H   &kp J            &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B             &kp N   &kp M            &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&trans     &trans  &kp LGUI  &kp LALT  &trans                               &trans           &kp LBKT   &kp RBKT  &trans    &trans
+&kp LCTRL  &trans  &kp LGUI  &kp LALT  &trans                               &trans           &kp LBKT   &kp RBKT  &trans    &trans
                                        &trans     &trans  &trans    &trans  &kp PRINTSCREEN  &trans
                                        &kp SPACE  &trans  &mo 2     &trans  &trans           &kp SPACE
             >;
@@ -27,7 +27,7 @@
 
         Nav_Layer {
             bindings = <
-&trans  &trans  &trans  &trans   &trans         &trans            &trans     &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans   &trans         &trans            &trans     &trans    &trans    &trans     &trans  &kp F12
 &trans  &trans  &trans  &trans   &trans         &trans            &trans     &trans    &trans    &trans     &trans  &kp EQUAL
 &trans  &trans  &trans  &kp DEL  &kp BACKSPACE  &trans            &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans  &trans
 &trans  &trans  &trans  &trans   &kp ENTER      &trans            &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
@@ -89,10 +89,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,
         <&zip_xy_scaler 1 3>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
